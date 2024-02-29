@@ -28,11 +28,29 @@
             animation: appear 3s;
             display: flex;
             justify-content: center;
+            align-items: center; /* Center vertically */
             background: linear-gradient(#111111, #2b2b2b);
             /* Changed gradient color */
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
+            height: 100vh; /* Set full height */
+            margin: 0; /* Remove default margin */
+        }
+
+        .avatar {
+            position: absolute;
+            top: 50%; /* Move the top of the image to the center of the screen */
+            transform: translateY(-50%); /* Move the image up by half of its height */
+            width: 150px; /* Adjust size as needed */
+            height: 150px; /* Adjust size as needed */
+            border-radius: 50%; /* Make it circular */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .avatar img {
+            width: 100%; /* Make the image fill the container */
+            height: auto; /* Maintain aspect ratio */
         }
 
         h1 {
@@ -40,15 +58,18 @@
             font-size: 15mm;
             position: absolute;
             color: #92918f;
-            top: 200px;
+            top: 60%; /* Adjust position */
+            text-align: center; /* Center horizontally */
+            width: 100%; /* Set full width */
+            margin: 0; /* Remove default margin */
         }
 
         h2 {
             font-family: Work Sans, sans-serif;
             font-size: 1.5em;
             color: #4c5c6c;
-            margin-top: 290px;
-            margin-left: 215px;
+            margin-top: 10px; /* Adjust margin */
+            text-align: center; /* Center horizontally */
         }
 
         highlight {
@@ -71,13 +92,19 @@
             font-family: Rubik, sans-serif;
             font-size: 6mm;
             position: absolute;
-            top: 340px;
+            top: 80%; /* Adjust position */
+            text-align: center; /* Center horizontally */
+            width: 100%; /* Set full width */
+            margin: 0; /* Remove default margin */
         }
 
         .redirects {
             position: absolute;
             margin: auto;
-            top: 400px;
+            top: 90%; /* Adjust position */
+            text-align: center; /* Center horizontally */
+            width: 100%; /* Set full width */
+            margin: 0; /* Remove default margin */
         }
 
         ul.horz-list li {
@@ -117,6 +144,10 @@
 </head>
 
 <body>
+    <div class="avatar">
+        <img src="https://cdn.discordapp.com/avatars/1110011733382287411/2459aec64f5cd2c2dde77ec269622f19.png?size=2048"
+            alt="Bot Avatar">
+    </div>
     <h1>lain#0036</h1>
     <div class="statistics">Available to <highlight>200+</highlight> servers.</div>
     <div class="redirects">
