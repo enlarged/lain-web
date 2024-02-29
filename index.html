@@ -29,6 +29,7 @@
             display: flex;
             justify-content: center;
             align-items: center; /* Center vertically */
+            flex-direction: column; /* Stack elements vertically */
             background: linear-gradient(#111111, #2b2b2b);
             /* Changed gradient color */
             background-repeat: no-repeat;
@@ -39,9 +40,6 @@
         }
 
         .avatar {
-            position: absolute;
-            top: 50%; /* Move the top of the image to the center of the screen */
-            transform: translateY(-50%); /* Move the image up by half of its height */
             width: 150px; /* Adjust size as needed */
             height: 150px; /* Adjust size as needed */
             border-radius: 50%; /* Make it circular */
@@ -56,20 +54,17 @@
         h1 {
             font-family: Work Sans, sans-serif;
             font-size: 15mm;
-            position: absolute;
             color: #92918f;
-            top: 60%; /* Adjust position */
             text-align: center; /* Center horizontally */
-            width: 100%; /* Set full width */
-            margin: 0; /* Remove default margin */
+            margin-bottom: 5px; /* Adjust margin */
         }
 
         h2 {
             font-family: Work Sans, sans-serif;
             font-size: 1.5em;
             color: #4c5c6c;
-            margin-top: 10px; /* Adjust margin */
             text-align: center; /* Center horizontally */
+            margin-bottom: 5px; /* Adjust margin */
         }
 
         highlight {
@@ -87,24 +82,8 @@
             width: 100%;
         }
 
-        div.statistics {
-            color: white;
-            font-family: Rubik, sans-serif;
-            font-size: 6mm;
-            position: absolute;
-            top: 80%; /* Adjust position */
-            text-align: center; /* Center horizontally */
-            width: 100%; /* Set full width */
-            margin: 0; /* Remove default margin */
-        }
-
         .redirects {
-            position: absolute;
-            margin: auto;
-            top: 90%; /* Adjust position */
             text-align: center; /* Center horizontally */
-            width: 100%; /* Set full width */
-            margin: 0; /* Remove default margin */
         }
 
         ul.horz-list li {
@@ -149,7 +128,6 @@
             alt="Bot Avatar">
     </div>
     <h1>lain#0036</h1>
-    <div class="statistics">Available to <highlight>200+</highlight> servers.</div>
     <div class="redirects">
         <ul class="horz-list">
             <li><a href="https://discord.gg/okay">Support</a></li>
