@@ -1,161 +1,996 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lain Bot</title>
+<meta name="viewport" content="initial-scale=0.4, minimal-ui, viewport-fit=cover, width=device-width">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sarala&amp;display=swap">
+<link rel="stylesheet" href="https://lains.win/commands.css" type="text/css">
+<link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/994052621570687158/6cb88f483d2a1f8cf2ba3c5f6e5b993b.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="18456f5ca8fcc9d0ca362b7e-text/javascript"></script>
+
+<title>lain - commands</title>
 <style>
-body { background-color: black; color: white; }
+        ::-webkit-input-placeholder {
+                color: white;
+        }
+        :-moz-placeholder {
+                color: white;  
+        }
+        ::-moz-placeholder { 
+                color: white;  
+        }
+        :-ms-input-placeholder {  
+                color: white;  
+        }
 </style>
 </head>
-<body>
-<h2>fun</h2>
-<p>4k: Sends a 4k image in NSFW channels</p>
-<p>anal: Sends a anal image in NSFW channels</p>
-<p>ass: Sends a ass image in NSFW channels</p>
-<p>birthday: See how far your birthday is</p>
-<p>boobs: Sends a boobs image in NSFW channels</p>
-<p>coinflip: Flip a coin and get heads or tails.</p>
-<p>cuddle: cuddle a server member</p>
-<p>divorce: Divorce your partner.</p>
-<p>fuck: Get naughty with a server member</p>
-<p>hentai: Sends a hentai image in NSFW channels</p>
-<p>howgay: See how gay a server member is</p>
-<p>hug: hug a server member</p>
-<p>iq: View the IQ of a member</p>
-<p>kiss: Kiss a server member</p>
-<p>marriage: Display information about your marriage or someone else's marriage.</p>
-<p>marry: Marry a server member.</p>
-<p>pat: pat a server member</p>
-<p>penis: Check the size of a mentioned user's imaginary penis.</p>
-<p>pussy: Sends a pussy image in NSFW channels</p>
-<p>randomcolor: Generates a random hexadecimal color code.</p>
-<p>shame: Shame a user</p>
-<p>slap: slap a server member</p>
-<p>tickle: tickle a server member</p>
-<p>waifu: Sends a waifu image</p>
-<h2>information</h2>
-<p>avatar: Show the avatar of a specified user.</p>
-<p>userbanner: View a user's banner.</p>
-<p>boost: Shows server boost information.</p>
-<p>botinfo: Shows information about the bot.</p>
-<p>clearnames: Clear your past usernames from the database</p>
-<p>credits: Show the credits for the bot.</p>
-<p>docs: Sends the documentation link for lain.</p>
-<p>editsnipe: View recently edited messages in the current channel.</p>
-<p>enlarge: Enlarge an emoji.</p>
-<p>firstmessage: Provides the first message of a channel.</p>
-<p>help: Displays a list of available commands.</p>
-<p>invite: Invite the bot to your server</p>
-<p>membercount: Shows member count.</p>
-<p>namehistory: View the name history of a user.</p>
-<p>oldest: Shows the oldest member in the server.</p>
-<p>ping: Check the bot's latency to Discord API.</p>
-<p>roleinfo: N/A</p>
-<p>rolelist: Shows all roles in the server.</p>
-<p>serverbanner: Show the server banner.</p>
-<p>servericon: Show the server icon.</p>
-<p>serverinfo: Shows server information.</p>
-<p>snipe: Snipe a recently deleted message</p>
-<p>support: Shows bot support.</p>
-<p>uptime: Shows bot uptime.</p>
-<p>userinfo: View a server member's information</p>
-<p>vanityuses: Check how many uses your vanity has</p>
-<p>youngest: Shows the youngest member in the server.</p>
-<p>emoji: Manage your server emojis.</p>
-<p>quickpoll: Poll yes/no question.</p>
-<h2>miscellaneous</h2>
-<p>joinposition: View the join position of a member.</p>
-<p>appstore: Search for an app on the App Store.</p>
-<p>bitcoin: Get the current Bitcoin price (USD default).</p>
-<p>cashapp: View a CashApp profile</p>
-<p>clever: Chat with an AI</p>
-<p>dictionary: Show the definition of a word</p>
-<p>ethereum: Get the current Ethereum price (USD default).</p>
-<p>fortnite: Fortnite cosmetic-related commands</p>
-<p>github: Gets profile information on the given Github user</p>
-<p>image: snipe a recently deleted message</p>
-<p>imdb: Get the information about a movie or series.</p>
-<p>itunes: Search iTunes for a song</p>
-<p>litecoin: Get the current Litecoin price (USD default).</p>
-<p>ocr: Extract text from an image</p>
-<p>pinterest: Search pins or view a users pins on pinterest</p>
-<p>roblox: Look up a Roblox user profile using your cookie.</p>
-<p>snapchat: Search snapchat for a profile</p>
-<p>spotify: Search spotify for a song</p>
-<p>steam: Search Steam for a game</p>
-<p>tiktok: Get information on a TikTok profile</p>
-<p>timezone: View a location's timezone</p>
-<p>translate: Translate text between languages</p>
-<p>twitter: View a twitter profile</p>
-<p>urban: Shows the definition of a word from Urban Dictionary</p>
-<p>valorant: Get information on a Valorant profile</p>
-<p>vanitycheck: Checks if a vanity URL is available for a server.</p>
-<p>weather: Gets simple weather using openweathermap API</p>
-<p>wikipedia: Search wiki for a query</p>
-<p>wolfram: Get math answers</p>
-<p>xbox: Gets profile information on the given Xbox gamertag</p>
-<p>youtube: Searches youtube for video query</p>
-<h2>lastfm</h2>
-<p>lastfm: Interact with your music</p>
-<p>nowplaying: Shows your most recent track</p>
-<p>recent: Shows your most recent tracks</p>
-<p>topalbums: View your top albums on LastFM</p>
-<p>topartists: View your top artists on LastFM</p>
-<p>toptracks: View your top tracks on LastFM</p>
-<h2>moderation</h2>
-<p>autoreact: Set up automatic replies to messages that match a trigger</p>
-<p>autoresponder: Set up automatic replies to messages that match a trigger</p>
-<p>ban: Bans mentioned user.</p>
-<p>channel: Manipulate channels</p>
-<p>chunkban: Bulk bans users with default avatars.</p>
-<p>cleanup: Purge messages from bots and common prefixes.</p>
-<p>clearfiles: Clear all files in the channel.</p>
-<p>clearsnipe: Clears the snipes for the current channel</p>
-<p>drag: Drags users from a mentioned voice channel to your voice channel or all users if "all" is specified.</p>
-<p>hide: Hide the channel from @everyone or specific users/roles</p>
-<p>jail: Jails the specified member (sets up upon first use)</p>
-<p>kick: Kicks mentioned user.</p>
-<p>lock: Locks the channel from everyone</p>
-<p>mute: Mute a user in the text channel</p>
-<p>nickname: Set or reset the nickname for a user.</p>
-<p>nuke: Deletes and recreates the current channel.</p>
-<p>pin: Pin a message by its ID</p>
-<p>purge: Mass delete messages</p>
-<p>reposter: Manage if the bot reposts social media videos</p>
-<p>role: Manage server roles</p>
-<p>setbanner: Sets the server banner</p>
-<p>seticon: Sets the server icon</p>
-<p>setnsfw: Mark a channel as NSFW</p>
-<p>setsplash: Sets the server splash</p>
-<p>softban: Bans a user then unbans instantly</p>
-<p>tempnsfw: Mark the channel as NSFW for 60 seconds.</p>
-<p>topic: Set the topic of a channel</p>
-<p>tracker: Set or reset the channel for displaying usernames.</p>
-<p>unban: Unban a user by ID or username</p>
-<p>unbanall: Unban all banned users</p>
-<p>unhide: Unhide the channel previously hidden from @everyone or specific users/roles.</p>
-<p>unjail: Release a user from the shackles</p>
-<p>unlock: Unlocks the channel for everyone</p>
-<p>unmute: Unmute a user in the text channel</p>
-<p>unpin: Unpin a pinned message by its ID</p>
-<p>unsetnsfw: Remove NSFW setting from a channel</p>
-<p>setme: Sets up the jail for the server</p>
-<h2>configuration</h2>
-<p>antiraid: Automatically bans new users and users with no profile picture</p>
-<p>autoanime: Automatically sends anime icons</p>
-<p>autonsfw: Set or reset the auto roleplay channel for NSFW roles.</p>
-<p>autopfp: Automatically sends pfps to a channel</p>
-<p>autogif: Automatically sends gif pfps to a channel</p>
-<p>autobanner: Automatically sends banners to a channel</p>
-<p>autorole: Manage autoroles for the server</p>
-<p>chatfilter: Manage the chat filter</p>
-<p>filterinvites: Enable or disable filtering of invite links in the server.</p>
-<p>goodbye: Manage goodbye settings for the server</p>
-<p>imageonly: Make channels image only</p>
-<p>joindm: Greet new members via DMs</p>
-<p>modlogs: Set up logging for the server</p>
-<p>prefix: Set or reset the bot's prefix for this server.</p>
+<script type="text/javascript">
+        function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("search-bar");
+                filter = input.firstElementChild.value.toUpperCase();
+                li = document.getElementsByClassName("command-1Ek3-");
 
-</body>
+                for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByClassName("command-name-2UNJV")[0]
+                txtValue = a.textContent || a.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) !== -1) {
+                        li[i].style.display = "";
+                }
+                else {
+                        li[i].style.display = "none";
+                }
+                }
+        }
+        myFunction();
+</script>
+<script>
+        function do_table_work(title) {
+        console.log(title)
+        if (title === 'All') {
+        var elements = document.getElementsByClassName('table-dD95W')
+        var oo = document.getElementsByClassName("command-1Ek3-");
+        console.log(oo)
+        for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = 'block';
+                oo[i].style.display = 'block';
+        }
+        } else {
+        var elements = document.getElementsByClassName('table-dD95W')
+        for (var i = 0; i < elements.length; i++) {
+                if (elements[i].style.display === 'none') {
+                if (elements[i].id === title) {
+                        elements[i].style.display = 'block';
+                }
+                } else {
+                if (elements[i].id === title) {
+                        continue
+                }
+                elements[i].style.display = 'none';
+                }
+        }
+        }
+        }
+        
+        window.onload = function() {
+        var header = document.getElementById("sideNavChoose");
+        var btns = header.getElementsByClassName("btn"); 
+                
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active-4svGK");
+        if (current.length > 0) { 
+                current[0].className = current[0].className.replace(" active-4svGK", "");
+        }
+        this.className += " active-4svGK";
+        });
+        }
+        }
+</script>
+<body>
+<div class="app-1jaXl app-desktop">
+<nav class="nav-kTxQW">
+        
+<div class="navbar-2kznD">
+<a class="brand-1V9Xv" href="/"><span href=""> </span><span class="brand-text-1QXBj">lain </span></a><ul>
+<li><a href="https://lains.win">Home</a></li>
+<li><a aria-current="page" class="active" href="#">Commands</a></li>
+<li><a href="https://discord.gg/okay">Server</a></li>
+
+</ul>
+</div>
+</nav>
+<div class="page-25Hv3">
+<div class="container-10oz2">
+<div class="column-y2WcB">
+<div class="sidenav-2J7Sr" id="sideNavChoose">
+<ul>
+<li><a class="btn" id="search-bar"><input type="text" autocomplete="off" placeholder="Search.." onkeyup="if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; myFunction()" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""></a></li>
+<li class="btn active-4svGK" onclick="do_table_work('All')" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""><span>All</span></li>
+<li class="btn" onclick="do_table_work('Miscellaneous')" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""><span>Miscellaneous</span></li>
+<li class="btn" onclick="do_table_work('Servers')" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""><span>Servers</span></li>
+<li class="btn" onclick="do_table_work('Moderation')" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""><span>Moderation</span></li>
+<li class="btn" onclick="do_table_work('Information')" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""><span>Information</span></li>
+<li class="btn" onclick="do_table_work('lastfm')" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""><span>LastFM</span></li>
+<li class="btn" onclick="do_table_work('Fun')" data-cf-modified-18456f5ca8fcc9d0ca362b7e-="" data-cf-modified-2a0aefbd2488bc8c45f10167-=""><span>Fun</span></li>
+</ul>
+</div>
+</div>
+<div class="column-y2WcB colum-big-2uZWL">
+<div class="tables-2UgSY">
+<div class="table-dD95W" id="Moderation">
+<div class="table-header-21_bM"><span>Moderation</span></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autoreact </span></div>
+<div class="command-description-_Qpat"><span>Set up auto reactions</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autoresponder</span></div>
+<div class="command-description-_Qpat"><span>Set up auto responders</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>quickpoll</span></div>
+<div class="command-description-_Qpat"><span>Create a poll</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>emoji</span></div>
+<div class="command-description-_Qpat"><span>Manage server emojis</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>ban</span></div>
+<div class="command-description-_Qpat"><span>Bans mentioned user</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>channel</span></div>
+<div class="command-description-_Qpat"><span>Manipulate channels</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>chunkban defaultavatars</span></div>
+<div class="command-description-_Qpat"><span>Remove users with no PFP</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>cleanup</span></div>
+<div class="command-description-_Qpat"><span>Clean up after bots</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>clearfiles</span></div>
+<div class="command-description-_Qpat"><span>Purge messages with  images</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>clearsnipe</span></div>
+<div class="command-description-_Qpat"><span>Clear snipes from a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>drag</span></div>
+<div class="command-description-_Qpat"><span>Drag members from vcs</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>jail</span></div>
+<div class="command-description-_Qpat"><span>Jails the specified member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>kick</span></div>
+<div class="command-description-_Qpat"><span>Kick a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>lock</span></div>
+<div class="command-description-_Qpat"><span>Lock a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>lock</span></div>
+<div class="command-description-_Qpat"><span>Lock a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>mute</span></div>
+<div class="command-description-_Qpat"><span>Mute a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>nickname</span></div>
+<div class="command-description-_Qpat"><span>Rename a user</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>nuke</span></div>
+<div class="command-description-_Qpat"><span>Delete and recreate channels</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>pin</span></div>
+<div class="command-description-_Qpat"><span>Pin a message</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>purge</span></div>
+<div class="command-description-_Qpat"><span>Mass delete messages</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>purge</span></div>
+<div class="command-description-_Qpat"><span>Mass delete messages</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>reposter</span></div>
+<div class="command-description-_Qpat"><span>Configure socail media reposting</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>role</span></div>
+<div class="command-description-_Qpat"><span>Manage server roles</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>role</span></div>
+<div class="command-description-_Qpat"><span>Manage server roles</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>setbanner</span></div>
+<div class="command-description-_Qpat"><span>Set the server banner</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>seticon</span></div>
+<div class="command-description-_Qpat"><span>Set the server icon</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>setsplash</span></div>
+<div class="command-description-_Qpat"><span>Set the server splash</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>softban</span></div>
+<div class="command-description-_Qpat"><span>Bans a user then unbans instantly</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>tempnsfw</span></div>
+<div class="command-description-_Qpat"><span>Mark a channel nsfw for 60s</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>topic</span></div>
+<div class="command-description-_Qpat"><span>Set the topic of channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unban</span></div>
+<div class="command-description-_Qpat"><span>Unban a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unbanall</span></div>
+<div class="command-description-_Qpat"><span>Unban all banned users</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unhide</span></div>
+<div class="command-description-_Qpat"><span>Unhide a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unjail</span></div>
+<div class="command-description-_Qpat"><span>Remove a user from jail</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unlock</span></div>
+<div class="command-description-_Qpat"><span>Unlock a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unmute</span></div>
+<div class="command-description-_Qpat"><span>unmute a member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unpin</span></div>
+<div class="command-description-_Qpat"><span>Unpin a message</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>unsetnsfw</span></div>
+<div class="command-description-_Qpat"><span>Remove nsfw from a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>setme</span></div>
+<div class="command-description-_Qpat"><span>Set up the jail</span></div>
+</div>
+</div>
+</div>
+<div class="table-dD95W" id="Fun">
+<div class="table-header-21_bM"><span>Fun</span></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>4k</span></div>
+<div class="command-description-_Qpat"><span>Sends a 4k image in NSFW channels</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>anal</span></div>
+<div class="command-description-_Qpat"><span>Sends a anal image in NSFW channels</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>ass</span></div>
+<div class="command-description-_Qpat"><span>Sends an ass image in NSFW channels</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>birthday</span></div>
+<div class="command-description-_Qpat"><span>See how far your birthday is</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>boobs</span></div>
+<div class="command-description-_Qpat"><span>Sends an boobs image in NSFW channels</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>coinflip</span></div>
+<div class="command-description-_Qpat"><span>flip a coin</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>cuddle</span></div>
+<div class="command-description-_Qpat"><span>cuddle a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>divorce</span></div>
+<div class="command-description-_Qpat"><span>divorce your partner</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>fuck</span></div>
+<div class="command-description-_Qpat"><span>get naughty with a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>hentai</span></div>
+<div class="command-description-_Qpat"><span>Sends a hentai image in NSFW channels</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>howgay</span></div>
+<div class="command-description-_Qpat"><span>see how gay a member is</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>hug</span></div>
+<div class="command-description-_Qpat"><span>hug a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>iq</span></div>
+<div class="command-description-_Qpat"><span>see a members iq</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>kiss</span></div>
+<div class="command-description-_Qpat"><span>kiss a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>marriage</span></div>
+<div class="command-description-_Qpat"><span>see who you're married to</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>marry</span></div>
+<div class="command-description-_Qpat"><span>marry a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>pat</span></div>
+<div class="command-description-_Qpat"><span>pat a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>penis</span></div>
+<div class="command-description-_Qpat"><span>see how big your penis is</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>pussy</span></div>
+<div class="command-description-_Qpat"><span>Sends a random pussy NSFW image</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>randomcolor</span></div>
+<div class="command-description-_Qpat"><span>sends a random color</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>randomcolor</span></div>
+<div class="command-description-_Qpat"><span>sends a random color</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>shame</span></div>
+<div class="command-description-_Qpat"><span>Shame a user</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>slap</span></div>
+<div class="command-description-_Qpat"><span>slap a server member</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>waifu</span></div>
+<div class="command-description-_Qpat"><span>sends a random waifu</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>randomcolor</span></div>
+<div class="command-description-_Qpat"><span>sends a random color</span></div>
+</div>
+</div>
+<div class="table-dD95W" id="Servers">
+<div class="table-header-21_bM"><span>Servers</span></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autoanime</span></div>
+<div class="command-description-_Qpat"><span>Send anime pfps to a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>antiraid</span></div>
+<div class="command-description-_Qpat"><span>Protect your server from raids</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autonsfw</span></div>
+<div class="command-description-_Qpat"><span>Send nsfw to a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autopfp</span></div>
+<div class="command-description-_Qpat"><span>Send random pfps to a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autogif</span></div>
+<div class="command-description-_Qpat"><span>Send gif pfps to a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autobanner</span></div>
+<div class="command-description-_Qpat"><span>Send banners to a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>autorole</span></div>
+<div class="command-description-_Qpat"><span>Automatically give users a role</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>chatfilter</span></div>
+<div class="command-description-_Qpat"><span>Filter words in chat</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>filterinvites</span></div>
+<div class="command-description-_Qpat"><span>Filter invites in your server</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>goodbye</span></div>
+<div class="command-description-_Qpat"><span>Setup a goodbye message</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>imageonly</span></div>
+<div class="command-description-_Qpat"><span>Set a channel to image only</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>joindm</span></div>
+<div class="command-description-_Qpat"><span>Setup a joindm</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>modlogs</span></div>
+<div class="command-description-_Qpat"><span>Send mod actions to a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>prefix</span></div>
+<div class="command-description-_Qpat"><span>Set a new prefix in your server</span></div>
+</div>
+</div>
+<div class="table-dD95W" id="lastfm">
+<div class="table-header-21_bM"><span>LastFM</span></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>lastfm</span></div>
+<div class="command-description-_Qpat"><span>Set or reset your username</span></div>
+</div></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>nowplaying</span></div>
+<div class="command-description-_Qpat"><span>See your current track</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>topalbums</span></div>
+<div class="command-description-_Qpat"><span>View your top albums</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>toptracks</span></div>
+<div class="command-description-_Qpat"><span>View your top tracks</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>topartists</span></div>
+<div class="command-description-_Qpat"><span>View your top artists</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>recent</span></div>
+<div class="command-description-_Qpat"><span>View your recent tracks</span></div>
+</div>
+</div>
+</div>
+<div class="table-dD95W" id="Miscellaneous">
+<div class="table-header-21_bM"><span>Miscellaneous</span></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>appstore</span></div>
+<div class="command-description-_Qpat"><span>Search up an up</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>cashapp</span></div>
+<div class="command-description-_Qpat"><span>Search a cashapp profile</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>clever</span></div>
+<div class="command-description-_Qpat"><span>Chat with an AI</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>dictionary</span></div>
+<div class="command-description-_Qpat"><span>See what a word means</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>ethereum</span></div>
+<div class="command-description-_Qpat"><span>See the price of ethereum</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>fortnite lookup</span></div>
+<div class="command-description-_Qpat"><span>See info on a cosmetic</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>fortnite shop</span></div>
+<div class="command-description-_Qpat"><span>See the fortnite item shop</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>github</span></div>
+<div class="command-description-_Qpat"><span>See a github profile</span></div>
+</div></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>image</span></div>
+<div class="command-description-_Qpat"><span>Search images on google</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>imdb</span></div>
+<div class="command-description-_Qpat"><span>Search up a series</span></div>
+</div></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>itunes</span></div>
+<div class="command-description-_Qpat"><span>Search itunes for a song</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>litecoin</span></div>
+<div class="command-description-_Qpat"><span>See the price of litecoin</span></div>
+</div></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>ocr</span></div>
+<div class="command-description-_Qpat"><span>Extract text from an image</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>pinterest add</span></div>
+<div class="command-description-_Qpat"><span>Send a users pins to a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>pinterest search</span></div>
+<div class="command-description-_Qpat"><span>search pinterest for a</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>roblox</span></div>
+<div class="command-description-_Qpat"><span>Search a roblox profile</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>snapchat</span></div>
+<div class="command-description-_Qpat"><span>search a snapchat account</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>spotify</span></div>
+<div class="command-description-_Qpat"><span>Search spotify for a song</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>steam</span></div>
+<div class="command-description-_Qpat"><span>Search steam for a game</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>tiktok</span></div>
+<div class="command-description-_Qpat"><span>Search a tiktok profile</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>timezone</span></div>
+<div class="command-description-_Qpat"><span>View a location's timezone</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>translate</span></div>
+<div class="command-description-_Qpat"><span>Translate between languages</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>twitter</span></div>
+<div class="command-description-_Qpat"><span>Search a twitter profile</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>urban</span></div>
+<div class="command-description-_Qpat"><span>Search for a definition of a word</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>valorant</span></div>
+<div class="command-description-_Qpat"><span>Search for a valorant account</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>vanitycheck</span></div>
+<div class="command-description-_Qpat"><span>Check if a vanity is available</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>weather</span></div>
+<div class="command-description-_Qpat"><span>Gets simple weather using openweathermap API</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>wikipedia</span></div>
+<div class="command-description-_Qpat"><span>Search wiki for a query</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>wolfram</span></div>
+<div class="command-description-_Qpat"><span>Get math answers</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>xbox</span></div>
+<div class="command-description-_Qpat"><span>Search an xbox profile</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>youtube</span></div>
+<div class="command-description-_Qpat"><span>Search youtube for a query</span></div>
+</div>
+</div>
+
+</div>
+<div class="table-dD95W" id="Information">
+<div class="table-header-21_bM"><span>Information</span></div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>userbanner</span></div>
+<div class="command-description-_Qpat"><span>View a user's banne</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>avatar</span></div>
+<div class="command-description-_Qpat"><span>Show the avatar of a specified user</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>boost</span></div>
+<div class="command-description-_Qpat"><span>Show server boost information</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>botinfo</span></div>
+<div class="command-description-_Qpat"><span>View the bots information</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>clearnames</span></div>
+<div class="command-description-_Qpat"><span>Clear your name history</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>credits</span></div>
+<div class="command-description-_Qpat"><span>Show the credits for the bot</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>docs</span></div>
+<div class="command-description-_Qpat"><span>Sends the documentation link for lain</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>editsnipe</span></div>
+<div class="command-description-_Qpat"><span>Snipe an edited message</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>enlarge</span></div>
+<div class="command-description-_Qpat"><span>Enlarge an emoji</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>firstmessage</span></div>
+<div class="command-description-_Qpat"><span>Provides the first message of a channel</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>help</span></div>
+<div class="command-description-_Qpat"><span>Displays a list of available commands</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>invite</span></div>
+<div class="command-description-_Qpat"><span>Invite the bot</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>membercount</span></div>
+<div class="command-description-_Qpat"><span>Shows member count</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>namehistory</span></div>
+<div class="command-description-_Qpat"><span>View the name history of a user</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>oldest</span></div>
+<div class="command-description-_Qpat"><span>Shows the oldest member in the server</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>ping</span></div>
+<div class="command-description-_Qpat"><span>Check bot latency</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>roleinfo</span></div>
+<div class="command-description-_Qpat"><span>View a roles information</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>rolelist</span></div>
+<div class="command-description-_Qpat"><span>See the servers roles</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>serverbanner</span></div>
+<div class="command-description-_Qpat"><span>View the server banner</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>servericon</span></div>
+<div class="command-description-_Qpat"><span>iew the server icon</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>serverinfo</span></div>
+<div class="command-description-_Qpat"><span>View the server information</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>snipe</span></div>
+<div class="command-description-_Qpat"><span>Snipe a deleted message</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>support</span></div>
+<div class="command-description-_Qpat"><span>Sends support server</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>uptime</span></div>
+<div class="command-description-_Qpat"><span>Shows bot uptime</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>userinfo</span></div>
+<div class="command-description-_Qpat"><span>View a server member's information</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>vanityuses</span></div>
+<div class="command-description-_Qpat"><span>Check how many uses your vanity has</span></div>
+</div>
+</div>
+<div class="command-1Ek3-">
+<div class="command-header-rwwom">
+<div class="command-name-2UNJV"><span>youngest</span></div>
+<div class="command-description-_Qpat"><span>Shows the youngest member in the server</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="18456f5ca8fcc9d0ca362b7e-|49" defer="" type="2a0aefbd2488bc8c45f10167-text/javascript"></script><script type="2a0aefbd2488bc8c45f10167-text/javascript">(function(){var js = "window['__CF$cv$params']={r:'7af60759fb75242f',m:'ERu.f5X8n5ZEXTvquKR6LK6oHEdz93XRP.es9b2D_QU-1680071054-0-ASPVTwk3h7MkvU2+hXlXN0+ae2LGebNDzqU5mzMwzCIXfc77NY4inGixuFDdQzzvl+ZDJgINhzdCNdLmgTx8k+oJM/uJAPVsCm1vD6powAgmIggo5bMqoE7uiSiGaU+H+Q==',s:[0xad54e41958,0xc2ebd819a2],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2a0aefbd2488bc8c45f10167-|49" defer=""></script></body>
 </html>
+
