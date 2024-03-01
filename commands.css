@@ -18,9 +18,7 @@ html, body {
   font-family: Sarala, sans-serif;
   font-style: normal;
   margin: 0;
-/*  background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.48)),color-stop(.01%,rgba(16,18,23)),to(rgba(0,0,0,.48)));
-  background-image:-moz-linear-gradient(top,rgba(0,0,0,.8) 0,rgba(0,0,0,.48) 5%,#e7e3e383) 100%)); -->
-*/
+
   scrollbar-color: #131213 #282829;
   scrollbar-color: dark;
   -webkit-overflow-scrolling: touch;
@@ -1039,6 +1037,3 @@ ul {
   .app-1jaXl .app-desktop .app-mobile {
     height: auto;
     width: auto; }
-
-
-/*# sourceMappingURL=0a694f0626be74694d35.css.map*/
