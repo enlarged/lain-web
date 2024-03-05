@@ -92,17 +92,17 @@ ul {
           border-radius: 8px; }
 
 ::-webkit-scrollbar-track-piece {
-  background-color: #000001;
-  border: 3px solid #000001;
+  background-color: #040404;
+  border: 3px solid #0404041;
   -webkit-border-radius: 8px;
           border-radius: 8px; }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000001;
-  border: 3px solid #000001; }
+  background-color: #040404;
+  border: 3px solid #040404; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #000001; }
+  background-color: #040404; }
 
 .left-MpTh9 {
   float: left; }
@@ -134,7 +134,7 @@ ul {
   white-space: nowrap; }
 
 .btn-1XOhe.active-2-aMq, .btn-1XOhe:hover, .btn-1XOhe:focus {
-  background-color: rgba(0, 0, 1, 1); }
+  background-color: rgba(0.0157, 0.0157, 0.0157, 1); }
 
 .footer-35Njh {
   display: -webkit-box;
@@ -372,7 +372,7 @@ ul {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 1, 1);
+  background-color: rgba(0.0157, 0.0157, 0.0157, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.79);
   height: 68px;
@@ -615,7 +615,7 @@ ul {
         color: white;
         opacity: 0.7; }
     .page-25Hv3 .container-10oz2 .search-33BRf {
-      background-color: rgba(0, 0, 1, 1);
+      background-color: rgba(0.0157, 0.0157, 0.0157, 1);
       -webkit-border-radius: 5px;
          -moz-border-radius: 5px;
               border-radius: 5px;
@@ -675,7 +675,7 @@ ul {
               flex-flow: column nowrap; }
       .page-25Hv3 .container-10oz2 .sidenav-2J7Sr ul {
         background-color: rgba(0.071, 0.075, 0.110, 1);
-        border: 1px solid rgba(0, 0, 1, 1);
+        border: 1px solid rgba(0.0157, 0.0157, 0.0157, 1);
         position: sticky;
         -webkit-border-radius: 5px;
            -moz-border-radius: 5px;
@@ -979,7 +979,7 @@ ul {
       .home-32G0l .modal-3aKLv .nav-links-2ilw1 a.active-2DtwR, .home-32G0l .modal-3aKLv .nav-links-2ilw1 a:hover, .home-32G0l .modal-3aKLv .nav-links-2ilw1 a:focus {
         opacity: 0.7; }
     .home-32G0l .modal-3aKLv .add-to-2xKwd {
-      color: #000001;
+      color: #040404;
       cursor: pointer;
       display: -webkit-box;
       display: -webkit-flex;
