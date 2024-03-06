@@ -92,17 +92,17 @@ ul {
           border-radius: 8px; }
 
 ::-webkit-scrollbar-track-piece {
-  background-color: #040404;
-  border: 3px solid #0404041;
+  background-color: #241c1c;
+  border: 3px solid #241c1c1;
   -webkit-border-radius: 8px;
           border-radius: 8px; }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #040404;
-  border: 3px solid #040404; }
+  background-color: #241c1c;
+  border: 3px solid #241c1c; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #040404; }
+  background-color: #241c1c; }
 
 .left-MpTh9 {
   float: left; }
@@ -979,7 +979,7 @@ ul {
       .home-32G0l .modal-3aKLv .nav-links-2ilw1 a.active-2DtwR, .home-32G0l .modal-3aKLv .nav-links-2ilw1 a:hover, .home-32G0l .modal-3aKLv .nav-links-2ilw1 a:focus {
         opacity: 0.7; }
     .home-32G0l .modal-3aKLv .add-to-2xKwd {
-      color: #040404;
+      color: #241c1c;
       cursor: pointer;
       display: -webkit-box;
       display: -webkit-flex;
